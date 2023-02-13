@@ -11,27 +11,19 @@ function Sidebar() {
   return (
     <aside
       className={clsx(
-        'fixed left-0 min-w-[160px] w-[20%] hidden min-h-[calc(100vh-72.73px)] bg-gray-0 p-4 flex-col justify-between transition-all',
+        'fixed left-0 w-[200px] hidden min-h-[calc(100vh-72.73px)] bg-gray-0 p-4 flex-col justify-between transition-all border-r border-gray-100',
         'sm:flex',
-        'dark:bg-gray-850'
+        'dark:bg-gray-850 dark:border-gray-800'
       )}
     >
       <div className="flex flex-col gap-4">
         <NavItem href="/">
-          <>
-            <span>
-              <FaShoppingBag />
-            </span>
-            <span>Products</span>
-          </>
+          <FaShoppingBag />
+          Products
         </NavItem>
         <NavItem href="/carts">
-          <>
-            <span>
-              <FaShoppingCart />
-            </span>
-            <span>Carts</span>
-          </>
+          <FaShoppingCart />
+          Carts
         </NavItem>
       </div>
       <p className="text-xs text-gray-500">

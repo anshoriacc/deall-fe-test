@@ -31,7 +31,9 @@ function Container({ children, title }: ContainerProps) {
       </Head>
       <Header />
       <Sidebar />
-      <section className="sm:pl-[25%]">{children}</section>
+      <section className={clsx('p-4', 'sm:pl-[calc(200px+1rem)]')}>
+        {children}
+      </section>
       <MobileNav />
     </main>
   );

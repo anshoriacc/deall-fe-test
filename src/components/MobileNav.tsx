@@ -13,20 +13,12 @@ function MobileNav() {
       )}
     >
       <NavItem href="/">
-        <>
-          <span>
-            <FaShoppingBag />
-          </span>
-          <span>Products</span>
-        </>
+        <FaShoppingBag />
+        Products
       </NavItem>
       <NavItem href="/carts">
-        <>
-          <span>
-            <FaShoppingCart />
-          </span>
-          <span>Carts</span>
-        </>
+        <FaShoppingCart />
+        Carts
       </NavItem>
     </div>
   );
