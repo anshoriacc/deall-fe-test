@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { useTheme } from 'next-themes';
 
 import deall from '@assets/images/deall.png';
-import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
+import { BsMoonStarsFill } from 'react-icons/bs';
+import { FaSun } from 'react-icons/fa';
 
 function Header() {
   const [mounted, setMounted] = useState(false);
@@ -45,11 +46,11 @@ function Header() {
       <button
         onClick={themeHandler}
         className={clsx(
-          'absolute right-4 h-[40px] aspect-square flex justify-center items-center rounded-lg transition-all',
-          'hover:bg-[#6913d8] hover:text-gray-0'
+          'absolute right-4 h-[40px] aspect-square flex justify-center items-center rounded-lg text-yellow-500 text-2xl transition-all',
+          'hover:bg-[#6913d8]'
         )}
       >
-        {theme === 'light' ? <BsSunFill /> : <BsMoonStarsFill />}
+        {theme === 'light' ? <FaSun /> : <BsMoonStarsFill />}
       </button>
     </header>
   );
