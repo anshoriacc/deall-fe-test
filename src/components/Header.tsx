@@ -45,7 +45,7 @@ function Header() {
       <button
         onClick={themeHandler}
         className={clsx(
-          'absolute right-4 h-8 aspect-square flex justify-center items-center rounded-lg transition-all',
+          'absolute right-4 h-[40px] aspect-square flex justify-center items-center rounded-lg transition-all',
           'hover:bg-[#6913d8] hover:text-gray-0'
         )}
       >
