@@ -1,15 +1,11 @@
 import clsx from 'clsx';
 import Head from 'next/head';
-import { ReactNode } from 'react';
+
+import { ContainerProps } from 'src/types';
 
 import Header from './Header';
 import MobileNav from './MobileNav';
 import Sidebar from './Sidebar';
-
-interface ContainerProps {
-  children: ReactNode;
-  title?: string;
-}
 
 function Container({ children, title }: ContainerProps) {
   const meta = {

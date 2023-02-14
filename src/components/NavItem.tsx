@@ -1,12 +1,8 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { ReactNode } from 'react';
 
-interface NavItemProps {
-  href: string;
-  children: ReactNode;
-}
+import { NavItemProps } from 'src/types';
 
 export default function NavItem({ href, children }: NavItemProps) {
   const router = useRouter();
