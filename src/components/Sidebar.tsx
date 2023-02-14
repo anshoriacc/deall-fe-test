@@ -37,7 +37,7 @@ function Sidebar() {
         >
           Achmad Anshori
         </a>
-        <span>🔹 </span>
+        <span> 🔹 </span>
         <a
           href="https://github.com/anshoriacc/deall-fe-test"
           target="_blank"

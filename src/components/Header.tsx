@@ -47,7 +47,7 @@ function Header() {
         onClick={themeHandler}
         className={clsx(
           'absolute right-4 h-[40px] aspect-square flex justify-center items-center rounded-lg text-yellow-500 text-2xl transition-all',
-          'hover:bg-[#6913d8]'
+          'hover:bg-gray-100 dark:hover:bg-gray-800'
         )}
       >
         {theme === 'light' ? <FaSun /> : <BsMoonStarsFill />}

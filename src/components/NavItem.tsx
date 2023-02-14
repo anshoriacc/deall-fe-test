@@ -16,11 +16,8 @@ export default function NavItem({ href, children }: NavItemProps) {
     <Link
       href={href}
       className={clsx(
-        isActive
-          ? 'font-bold bg-[#6913d8] text-gray-0'
-          : 'hover:bg-[#6913d8]',
-        'p-2 rounded-lg flex gap-2 items-center transition-all',
-        'hover:text-gray-0'
+        isActive ? 'font-bold bg-[#6913d8] text-gray-0' : 'hover:bg-gray-100',
+        'p-2 rounded-lg flex gap-2 items-center transition-all'
       )}
     >
       {children}
