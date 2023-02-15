@@ -54,9 +54,9 @@ function Filter({ debouncedChange }: FilterProps) {
         )}
       >
         <option value="">Filter by category</option>
-        {data?.map((category: string, index: number) => (
-          <option key={index} value={category}>
-            {category}
+        {data?.map((_category: string, index: number) => (
+          <option key={index} value={_category}>
+            {_category}
           </option>
         ))}
       </select>
