@@ -8,6 +8,7 @@ export interface ContainerProps {
 export interface NavItemProps {
   href: string;
   children: ReactNode;
+  name: string;
 }
 
 export interface Query {
