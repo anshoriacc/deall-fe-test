@@ -30,7 +30,7 @@ function Filter({ debouncedChange }: FilterProps) {
   };
 
   return (
-    <div className={clsx('px-4 grid gap-4', 'grid-cols-[3fr_2fr]')}>
+    <div className={clsx('px-4 grid gap-4', 'sm:grid-cols-[3fr_2fr]')}>
       <input
         type="search"
         name="search"
