@@ -30,7 +30,7 @@ function Header() {
   return (
     <header
       className={clsx(
-        'fixed top-0 w-full p-4 bg-gray-0 flex justify-center border-b border-gray-100 transition-all',
+        'fixed top-0 w-full p-4 bg-gray-0 flex justify-center border-b border-gray-100 transition-all z-10',
         'dark:bg-gray-850 dark:border-gray-800'
       )}
     >
