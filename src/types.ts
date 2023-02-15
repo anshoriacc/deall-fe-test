@@ -19,7 +19,6 @@ export interface Query {
 export interface FilterProps {
   query: Query;
   debouncedChange: (...args: any) => void;
-  categories: string[];
 }
 
 export interface ProductTableProps {
@@ -33,8 +32,4 @@ export interface PaginationProps {
   totalPage: number;
   nextPage: () => void;
   previousPage: () => void;
-}
-
-export interface HomeProps {
-  categories: string[];
 }

@@ -4,9 +4,16 @@ import useSWR from 'swr';
 
 import { FilterProps } from 'src/types';
 
-function Filter({ debouncedChange, categories }: FilterProps) {
+import fetcher from '@lib/fetcher';
+
+function Filter({ debouncedChange }: FilterProps) {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('');
+
+  const { data, error, isLoading } = useSWR(
+    'https://dummyjson.com/products/categories',
+    fetcher
+  );
 
   const changeHandler = (e: ChangeEvent<any>) => {
     if (e.target.name === 'category') {
@@ -47,7 +54,7 @@ function Filter({ debouncedChange, categories }: FilterProps) {
         )}
       >
         <option value="">Filter by category</option>
-        {categories?.map((category: string, index: number) => (
+        {data?.map((category: string, index: number) => (
           <option key={index} value={category}>
             {category}
           </option>
