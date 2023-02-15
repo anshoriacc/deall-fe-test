@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import Image from 'next/image';
 
 import { ProductTableProps } from 'src/types';
 
@@ -7,7 +8,7 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
     <div className="p-4">
       <table
         className={clsx(
-          'w-full table-auto border-collapse text-xs',
+          'w-full table-auto border-collapse text-xs cursor-default',
           'sm:text-sm'
         )}
       >
@@ -39,48 +40,79 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
                   className={clsx(
                     index % 2 === 0
                       ? 'bg-gray-0 dark:bg-gray-850 transition-all'
-                      : ''
+                      : '',
+                    'group'
                   )}
                 >
                   <td
                     className={clsx(
                       'border-gray-100 py-1 px-2 w-[30%] transition-all',
-                      'dark:border-gray-800'
+                      'dark:border-gray-800',
+                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
-                    <div className="w-full h-[14px] my-[3px] bg-gray-500 animate-pulse rounded-xl" />
+                    <div
+                      className={clsx(
+                        'w-full h-[12px] my-[2px] bg-gray-500 animate-pulse rounded-xl',
+                        'sm:h-[14px] sm:my-[3px]'
+                      )}
+                    />
                   </td>
                   <td
                     className={clsx(
                       'border-x border-gray-100 py-1 px-2 w-[20%] transition-all',
-                      'dark:border-gray-800'
+                      'dark:border-gray-800',
+                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
-                    <div className="w-full h-[14px] my-[3px] bg-gray-500 animate-pulse rounded-xl" />
+                    <div
+                      className={clsx(
+                        'w-full h-[12px] my-[2px] bg-gray-500 animate-pulse rounded-xl',
+                        'sm:h-[14px] sm:my-[3px]'
+                      )}
+                    />
                   </td>
                   <td
                     className={clsx(
                       'border-x border-gray-100 py-1 px-2 w-[15%] transition-all',
-                      'dark:border-gray-800'
+                      'dark:border-gray-800',
+                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
-                    <div className="w-full h-[14px] my-[3px] bg-gray-500 animate-pulse rounded-xl" />
+                    <div
+                      className={clsx(
+                        'w-full h-[12px] my-[2px] bg-gray-500 animate-pulse rounded-xl',
+                        'sm:h-[14px] sm:my-[3px]'
+                      )}
+                    />
                   </td>
                   <td
                     className={clsx(
                       'border-x border-gray-100 py-1 px-2 w-[15%] transition-all',
-                      'dark:border-gray-800'
+                      'dark:border-gray-800',
+                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
-                    <div className="w-full h-[14px] my-[3px] bg-gray-500 animate-pulse rounded-xl" />
+                    <div
+                      className={clsx(
+                        'w-full h-[12px] my-[2px] bg-gray-500 animate-pulse rounded-xl',
+                        'sm:h-[14px] sm:my-[3px]'
+                      )}
+                    />
                   </td>
                   <td
                     className={clsx(
                       'border-gray-100 py-1 px-2 w-[20%] transition-all',
-                      'dark:border-gray-800'
+                      'dark:border-gray-800',
+                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
-                    <div className="w-full h-[14px] my-[3px] bg-gray-500 animate-pulse rounded-xl" />
+                    <div
+                      className={clsx(
+                        'w-full h-[12px] my-[2px] bg-gray-500 animate-pulse rounded-xl',
+                        'sm:h-[14px] sm:my-[3px]'
+                      )}
+                    />
                   </td>
                 </tr>
               ))}
@@ -94,7 +126,12 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
                   Total Data
                 </th>
                 <td className="border-t border-[#500ea4] py-1 px-2 rounded-br-lg">
-                  <div className="w-full h-[14px] my-[3px] bg-gray-500 animate-pulse rounded-xl" />
+                  <div
+                    className={clsx(
+                      'w-full h-[12px] my-[2px] bg-gray-500 animate-pulse rounded-xl',
+                      'sm:h-[14px] sm:my-[3px]'
+                    )}
+                  />
                 </td>
               </tr>
             </tfoot>
@@ -108,23 +145,36 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
                   className={clsx(
                     index % 2 === 0
                       ? 'bg-gray-0 dark:bg-gray-850 transition-all'
-                      : ''
+                      : '',
+                    'group relative'
                   )}
                 >
                   <td
                     className={clsx(
                       'border-gray-100 py-1 px-2 w-[30%] transition-all',
-                      'dark:border-gray-800'
+                      'dark:border-gray-800',
+                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
-                    <p title={row.title} className="line-clamp-1">
-                      {row.title}
-                    </p>
+                    <div title={row.title} className="relative">
+                      <p className="line-clamp-1 peer">{row.title}</p>
+                      <Image
+                        src={row.images[0]}
+                        width={120}
+                        height={120}
+                        alt={row.title}
+                        className={clsx(
+                          'absolute top-full left-full w-[120px] h-[120px] object-cover invisible z-10 border-4 border-white shadow-md',
+                          'peer-hover:visible'
+                        )}
+                      />
+                    </div>
                   </td>
                   <td
                     className={clsx(
                       'border-x border-gray-100 py-1 px-2 w-[20%] transition-all',
-                      'dark:border-gray-800'
+                      'dark:border-gray-800',
+                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
                     <p title={row.brand} className="line-clamp-1">
@@ -134,7 +184,8 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
                   <td
                     className={clsx(
                       'border-x border-gray-100 py-1 px-2 w-[15%] transition-all',
-                      'dark:border-gray-800'
+                      'dark:border-gray-800',
+                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
                     <p title={row.price}>{row.price}</p>
@@ -142,7 +193,8 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
                   <td
                     className={clsx(
                       'border-x border-gray-100 py-1 px-2 w-[15%] transition-all',
-                      'dark:border-gray-800'
+                      'dark:border-gray-800',
+                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
                     <p title={row.stock}>{row.stock}</p>
@@ -150,7 +202,8 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
                   <td
                     className={clsx(
                       'border-gray-100 py-1 px-2 w-[20%] transition-all',
-                      'dark:border-gray-800'
+                      'dark:border-gray-800',
+                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
                     <p title={row.category} className="line-clamp-1">
