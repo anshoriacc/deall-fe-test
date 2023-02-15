@@ -26,7 +26,7 @@ function Pagination({
       <div>{page}</div>
       <button
         onClick={nextPage}
-        disabled={page === totalPage}
+        disabled={page === (totalPage ? totalPage : 1)}
         className={clsx(
           'p-2 bg-[#6913d8] text-gray-0 flex justify-center items-center rounded-lg',
           'disabled:bg-gray-100 disabled:text-gray-500'
