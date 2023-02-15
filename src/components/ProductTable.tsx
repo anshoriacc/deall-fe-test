@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 
-import { ProductTableProps } from 'src/types';
+import { TableProps } from 'src/types';
 
-function ProductTable({ data, error, isLoading }: ProductTableProps) {
+function ProductTable({ data, error, isLoading }: TableProps) {
   return (
     <div className="p-4">
       <table
@@ -34,7 +34,7 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
         {isLoading || error ? (
           <>
             <tbody>
-              {[...Array(10)].map((row, index) => (
+              {[...Array(10)].map((_row, index) => (
                 <tr
                   key={index}
                   className={clsx(
@@ -139,9 +139,9 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
         ) : (
           <>
             <tbody>
-              {data?.products?.map((row: any, index: number) => (
+              {data?.products?.map((_product: any, index: number) => (
                 <tr
-                  key={row.id}
+                  key={_product.id}
                   className={clsx(
                     index % 2 === 0
                       ? 'bg-gray-0 dark:bg-gray-850 transition-all'
@@ -156,13 +156,13 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
                       'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
-                    <div title={row.title} className="relative">
-                      <p className="line-clamp-1 peer">{row.title}</p>
+                    <div title={_product.title} className="relative">
+                      <p className="line-clamp-1 peer">{_product.title}</p>
                       <Image
-                        src={row.images[0]}
+                        src={_product.images[0]}
                         width={120}
                         height={120}
-                        alt={row.title}
+                        alt={_product.title}
                         className={clsx(
                           'absolute top-full left-full w-[120px] h-[120px] object-cover invisible z-10 border-4 border-white shadow-md',
                           'peer-hover:visible'
@@ -177,8 +177,8 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
                       'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
-                    <p title={row.brand} className="line-clamp-1">
-                      {row.brand}
+                    <p title={_product.brand} className="line-clamp-1">
+                      {_product.brand}
                     </p>
                   </td>
                   <td
@@ -188,7 +188,7 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
                       'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
-                    <p title={row.price}>{row.price}</p>
+                    <p title={_product.price}>${_product.price}</p>
                   </td>
                   <td
                     className={clsx(
@@ -197,7 +197,7 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
                       'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
-                    <p title={row.stock}>{row.stock}</p>
+                    <p title={_product.stock}>{_product.stock}</p>
                   </td>
                   <td
                     className={clsx(
@@ -206,8 +206,8 @@ function ProductTable({ data, error, isLoading }: ProductTableProps) {
                       'group-hover:bg-gray-100 group-hover:bg-opacity-50'
                     )}
                   >
-                    <p title={row.category} className="line-clamp-1">
-                      {row.category}
+                    <p title={_product.category} className="line-clamp-1">
+                      {_product.category}
                     </p>
                   </td>
                 </tr>

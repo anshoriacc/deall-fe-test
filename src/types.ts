@@ -22,10 +22,11 @@ export interface FilterProps {
   debouncedChange: (...args: any) => void;
 }
 
-export interface ProductTableProps {
+export interface TableProps {
   data: any;
   error: any;
   isLoading: boolean;
+  users?: User[];
 }
 
 export interface PaginationProps {
@@ -33,4 +34,13 @@ export interface PaginationProps {
   totalPage: number;
   nextPage: () => void;
   previousPage: () => void;
+}
+
+export interface CartsProps {
+  users: User[];
+}
+
+export interface User {
+  id: number;
+  fullName: string;
 }
