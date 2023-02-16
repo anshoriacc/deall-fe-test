@@ -17,16 +17,16 @@ function ProductTable({ data, error, isLoading }: TableProps) {
             <th className="border-b border-[#500ea4] py-1 px-2 w-[30%] rounded-tl-lg">
               Product Name
             </th>
-            <th className="border-x border-b border-[#500ea4] py-1 px-2 w-[20%]">
+            <th className="border-x border-b border-[#500ea4] py-1 px-2 w-[17.5%]">
               Brand
             </th>
-            <th className="border-x border-b border-[#500ea4] py-1 px-2 w-[15%]">
+            <th className="border-x border-b border-[#500ea4] py-1 px-2 w-[25%]">
               Price
             </th>
-            <th className="border-x border-b border-[#500ea4] py-1 px-2 w-[15%]">
+            <th className="border-x border-b border-[#500ea4] py-1 px-2 w-[10%]">
               Stock
             </th>
-            <th className="border-b border-[#500ea4] py-1 px-2 w-[20%] rounded-tr-lg">
+            <th className="border-b border-[#500ea4] py-1 px-2 w-[17.5%] rounded-tr-lg">
               Category
             </th>
           </tr>
@@ -60,7 +60,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                   </td>
                   <td
                     className={clsx(
-                      'border-x border-gray-100 py-1 px-2 w-[20%] transition-all',
+                      'border-x border-gray-100 py-1 px-2 w-[17.5%] transition-all',
                       'dark:border-gray-800',
                       'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
@@ -74,7 +74,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                   </td>
                   <td
                     className={clsx(
-                      'border-x border-gray-100 py-1 px-2 w-[15%] transition-all',
+                      'border-x border-gray-100 py-1 px-2 w-[25%] transition-all',
                       'dark:border-gray-800',
                       'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
@@ -88,7 +88,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                   </td>
                   <td
                     className={clsx(
-                      'border-x border-gray-100 py-1 px-2 w-[15%] transition-all',
+                      'border-x border-gray-100 py-1 px-2 w-[10%] transition-all',
                       'dark:border-gray-800',
                       'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
@@ -102,7 +102,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                   </td>
                   <td
                     className={clsx(
-                      'border-gray-100 py-1 px-2 w-[20%] transition-all',
+                      'border-gray-100 py-1 px-2 w-[17.5%] transition-all',
                       'dark:border-gray-800',
                       'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
@@ -159,7 +159,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                     <div title={_product.title} className="relative">
                       <p className="line-clamp-1 peer">{_product.title}</p>
                       <Image
-                        src={_product.images[0]}
+                        src={_product.thumbnail}
                         width={120}
                         height={120}
                         alt={_product.title}
@@ -172,7 +172,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                   </td>
                   <td
                     className={clsx(
-                      'border-x border-gray-100 py-1 px-2 w-[20%] transition-all',
+                      'border-x border-gray-100 py-1 px-2 w-[17.5%] transition-all',
                       'dark:border-gray-800',
                       'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
@@ -183,25 +183,40 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                   </td>
                   <td
                     className={clsx(
-                      'border-x border-gray-100 py-1 px-2 w-[15%] transition-all',
+                      'border-x border-gray-100 py-1 px-2 w-[25%] transition-all',
                       'dark:border-gray-800',
                       'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
                   >
-                    <p title={_product.price}>${_product.price}</p>
+                    <p>
+                      <span className="line-through text-gray-500">
+                        ${_product.price}
+                      </span>{' '}
+                      <span className="font-semibold">
+                        $
+                        {(
+                          ((100 - _product.discountPercentage) / 100) *
+                          _product.price
+                        ).toFixed(2)}
+                      </span>{' '}
+                      <span className="bg-red-400 text-xs rounded-lg px-1 inline-block">
+                        {_product.discountPercentage}%{' '}
+                        <span className={clsx('hidden', 'sm:inline')}>off</span>
+                      </span>
+                    </p>
                   </td>
                   <td
                     className={clsx(
-                      'border-x border-gray-100 py-1 px-2 w-[15%] transition-all',
+                      'border-x border-gray-100 py-1 px-2 w-[10%] transition-all',
                       'dark:border-gray-800',
                       'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
                   >
-                    <p title={_product.stock}>{_product.stock}</p>
+                    <p>{_product.stock}</p>
                   </td>
                   <td
                     className={clsx(
-                      'border-gray-100 py-1 px-2 w-[20%] transition-all',
+                      'border-gray-100 py-1 px-2 w-[17.5%] transition-all',
                       'dark:border-gray-800',
                       'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
@@ -217,11 +232,11 @@ function ProductTable({ data, error, isLoading }: TableProps) {
               <tr>
                 <th
                   colSpan={4}
-                  className="border-r border-t border-[#500ea4] py-1 px-2 w-[80%] rounded-bl-lg text-right"
+                  className="border-r border-t border-[#500ea4] py-1 px-2 rounded-bl-lg text-right"
                 >
                   Total Data
                 </th>
-                <th className="border-t border-[#500ea4] py-1 px-2 w-[20%] rounded-br-lg text-left">
+                <th className="border-t border-[#500ea4] py-1 px-2 rounded-br-lg text-left">
                   <p>{data.total}</p>
                 </th>
               </tr>
