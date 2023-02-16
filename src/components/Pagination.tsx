@@ -17,7 +17,8 @@ function Pagination({
         disabled={page === 1}
         className={clsx(
           'p-2 bg-[#6913d8] text-gray-0 flex justify-center items-center rounded-lg',
-          'disabled:bg-gray-100 disabled:text-gray-500'
+          'disabled:bg-gray-100 disabled:text-gray-500',
+          'dark:disabled:bg-gray-800'
         )}
       >
         <MdArrowBackIos />
@@ -28,7 +29,8 @@ function Pagination({
         disabled={page === (totalPage ? totalPage : 1)}
         className={clsx(
           'p-2 bg-[#6913d8] text-gray-0 flex justify-center items-center rounded-lg',
-          'disabled:bg-gray-100 disabled:text-gray-500'
+          'disabled:bg-gray-100 disabled:text-gray-500',
+          'dark:disabled:bg-gray-800'
         )}
       >
         <MdArrowForwardIos />
