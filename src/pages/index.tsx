@@ -21,7 +21,7 @@ function Home() {
             rel="noopener noreferrer"
           >
             <img
-              src="https://img.shields.io/npm/v/react"
+              src="https://img.shields.io/npm/v/react?label=react"
               alt="react"
               className="h-5 w-auto"
             />
@@ -32,7 +32,7 @@ function Home() {
             rel="noopener noreferrer"
           >
             <img
-              src="https://img.shields.io/npm/v/next"
+              src="https://img.shields.io/npm/v/next?label=next"
               alt="next"
               className="h-5 w-auto"
             />
@@ -43,7 +43,7 @@ function Home() {
             rel="noopener noreferrer"
           >
             <img
-              src="https://img.shields.io/npm/v/typescript"
+              src="https://img.shields.io/npm/v/typescript?label=typescript"
               alt="typescript"
               className="h-5 w-auto"
             />
@@ -54,7 +54,7 @@ function Home() {
             rel="noopener noreferrer"
           >
             <img
-              src="https://img.shields.io/npm/v/next-themes"
+              src="https://img.shields.io/npm/v/next-themes?label=next-themes"
               alt="next-themes"
               className="h-5 w-auto"
             />
@@ -65,7 +65,7 @@ function Home() {
             rel="noopener noreferrer"
           >
             <img
-              src="https://img.shields.io/npm/v/swr"
+              src="https://img.shields.io/npm/v/swr?label=swr"
               alt="swr"
               className="h-5 w-auto"
             />
@@ -76,7 +76,7 @@ function Home() {
             rel="noopener noreferrer"
           >
             <img
-              src="https://img.shields.io/npm/v/tailwindcss"
+              src="https://img.shields.io/npm/v/tailwindcss?label=tailwindcss"
               alt="tailwindcss"
               className="h-5 w-auto"
             />

@@ -52,7 +52,9 @@ function Carts({ users }: CartsProps) {
 }
 
 export async function getServerSideProps() {
-  const res = await axios.get('https://dummyjson.com/users?limit=0&select=firstName');
+  const res = await axios.get(
+    'https://dummyjson.com/users?limit=0&select=firstName'
+  );
   const { users } = await res.data;
 
   const mappedUsers = users.map((_user: any) => ({
