@@ -8,7 +8,6 @@ export default function NavItem({ href, children, name }: NavItemProps) {
   const router = useRouter();
   const isActive =
     href !== '/' ? router.asPath.startsWith(href) : router.asPath === href;
-  console.log(router);
 
   return (
     <Link
