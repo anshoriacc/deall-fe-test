@@ -48,7 +48,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                     className={clsx(
                       'border-gray-100 py-1 px-2 w-[30%] transition-all',
                       'dark:border-gray-800',
-                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
+                      'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
                   >
                     <div
@@ -62,7 +62,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                     className={clsx(
                       'border-x border-gray-100 py-1 px-2 w-[20%] transition-all',
                       'dark:border-gray-800',
-                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
+                      'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
                   >
                     <div
@@ -76,7 +76,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                     className={clsx(
                       'border-x border-gray-100 py-1 px-2 w-[15%] transition-all',
                       'dark:border-gray-800',
-                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
+                      'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
                   >
                     <div
@@ -90,7 +90,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                     className={clsx(
                       'border-x border-gray-100 py-1 px-2 w-[15%] transition-all',
                       'dark:border-gray-800',
-                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
+                      'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
                   >
                     <div
@@ -104,7 +104,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                     className={clsx(
                       'border-gray-100 py-1 px-2 w-[20%] transition-all',
                       'dark:border-gray-800',
-                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
+                      'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
                   >
                     <div
@@ -153,7 +153,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                     className={clsx(
                       'border-gray-100 py-1 px-2 w-[30%] transition-all',
                       'dark:border-gray-800',
-                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
+                      'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
                   >
                     <div title={_product.title} className="relative">
@@ -174,7 +174,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                     className={clsx(
                       'border-x border-gray-100 py-1 px-2 w-[20%] transition-all',
                       'dark:border-gray-800',
-                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
+                      'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
                   >
                     <p title={_product.brand} className="line-clamp-1">
@@ -185,7 +185,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                     className={clsx(
                       'border-x border-gray-100 py-1 px-2 w-[15%] transition-all',
                       'dark:border-gray-800',
-                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
+                      'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
                   >
                     <p title={_product.price}>${_product.price}</p>
@@ -194,7 +194,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                     className={clsx(
                       'border-x border-gray-100 py-1 px-2 w-[15%] transition-all',
                       'dark:border-gray-800',
-                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
+                      'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
                   >
                     <p title={_product.stock}>{_product.stock}</p>
@@ -203,7 +203,7 @@ function ProductTable({ data, error, isLoading }: TableProps) {
                     className={clsx(
                       'border-gray-100 py-1 px-2 w-[20%] transition-all',
                       'dark:border-gray-800',
-                      'group-hover:bg-gray-100 group-hover:bg-opacity-50'
+                      'group-hover:bg-gray-100 dark:group-hover:bg-gray-800 group-hover:bg-opacity-50'
                     )}
                   >
                     <p title={_product.category} className="line-clamp-1">
