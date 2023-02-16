@@ -1,5 +1,6 @@
 import Container from '@components/Container';
 import clsx from 'clsx';
+import Image from 'next/image';
 
 function Home() {
   return (
@@ -12,6 +13,86 @@ function Home() {
           This project built for technical test in Deall using Next.js and
           deployed in Vercel.
         </p>
+        <div className="flex gap-2 flex-wrap">
+          <a
+            href="https://www.npmjs.com/package/react"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="https://img.shields.io/npm/v/react?label=react"
+              alt="react"
+              height={20}
+              width={80}
+              className="h-5 w-auto"
+            />
+          </a>
+          <a
+            href="https://www.npmjs.com/package/next"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="https://img.shields.io/npm/v/next?label=next"
+              alt="next"
+              height={20}
+              width={80}
+              className="h-5 w-auto"
+            />
+          </a>
+          <a
+            href="https://www.npmjs.com/package/typescript"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="https://img.shields.io/npm/v/typescript?label=typescript"
+              alt="typescript"
+              height={20}
+              width={80}
+              className="h-5 w-auto"
+            />
+          </a>
+          <a
+            href="https://www.npmjs.com/package/next-themes"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="https://img.shields.io/npm/v/next-themes?label=next-themes"
+              alt="next-themes"
+              height={20}
+              width={80}
+              className="h-5 w-auto"
+            />
+          </a>
+          <a
+            href="https://www.npmjs.com/package/swr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="https://img.shields.io/npm/v/swr?label=swr"
+              alt="swr"
+              height={20}
+              width={80}
+              className="h-5 w-auto"
+            />
+          </a>
+          <a
+            href="https://www.npmjs.com/package/tailwindcss"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="https://img.shields.io/npm/v/tailwindcss?label=tailwindcss"
+              alt="tailwindcss"
+              height={20}
+              width={80}
+              className="h-5 w-auto"
+            />
+          </a>
+        </div>
         <h2 className="text-xl font-bold mt-2">
           Deployment link:{' '}
           <a
@@ -25,10 +106,21 @@ function Home() {
         </h2>
         <h2 className="text-xl font-bold mt-2">Pages</h2>
         <ul>
-          <li>Home (README): readme</li>
-          <li>Products: display products list</li>
-          <li>Carts: display carts list</li>
-          <li>Cart Detail: display cart detail (detail and products)</li>
+          <li className="before:content-['🏠']">Home (README): readme</li>
+          <li className="before:content-['🛍️']">
+            Products: display products list
+          </li>
+          <li className="before:content-['🛒']">Carts: display carts list</li>
+          <li className="before:content-['🛒']">
+            Cart Detail: display cart detail (detail and products)
+          </li>
+        </ul>
+        <h2 className="text-xl font-bold mt-2">Features</h2>
+        <ul>
+          <li className="before:content-['🌙']">Dark mode</li>
+          <li className="before:content-['🔎']">Filter: search and category</li>
+          <li className="before:content-['📃']">Pagination</li>
+          <li className="before:content-['📱']">Responsive</li>
         </ul>
         <h2 className="text-xl font-bold mt-2">Run Locally</h2>
         <p>Clone the Project</p>
