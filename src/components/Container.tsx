@@ -1,5 +1,5 @@
-import clsx from 'clsx';
 import Head from 'next/head';
+import clsx from 'clsx';
 
 import { ContainerProps } from 'src/types';
 

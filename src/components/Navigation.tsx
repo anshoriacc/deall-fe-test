@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+
 import { FaHome, FaShoppingBag, FaShoppingCart } from 'react-icons/fa';
 
 import NavItem from './NavItem';

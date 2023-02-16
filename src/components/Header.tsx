@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import clsx from 'clsx';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
+import clsx from 'clsx';
 
 import deall from '@assets/images/deall.png';
 import { BsMoonStarsFill } from 'react-icons/bs';

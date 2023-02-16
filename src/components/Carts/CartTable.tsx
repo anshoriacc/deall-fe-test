@@ -1,6 +1,6 @@
-import clsx from 'clsx';
-import Link from 'next/link';
 import { Fragment } from 'react';
+import Link from 'next/link';
+import clsx from 'clsx';
 
 import { TableProps } from 'src/types';
 

@@ -4,13 +4,14 @@ import useSWR from 'swr';
 import { Query } from 'src/types';
 
 import fetcher from '@lib/fetcher';
+import debounce from '@lib/debounce';
+
 import Container from '@components/Container';
 import Filter from '@components/Products/Filter';
-import ProductTable from '@components/ProductTable';
-import debounce from '@lib/debounce';
+import ProductTable from '@components/Products/ProductTable';
 import Pagination from '@components/Pagination';
 
-export default function Products() {
+function Products() {
   const [query, setQuery] = useState<Query>({
     page: 1,
     category: '',
@@ -80,3 +81,5 @@ export default function Products() {
     </Container>
   );
 }
+
+export default Products;

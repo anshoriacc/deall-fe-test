@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from 'react';
-import clsx from 'clsx';
 import useSWR from 'swr';
+import clsx from 'clsx';
 
 import { FilterProps } from 'src/types';
 

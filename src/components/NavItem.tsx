@@ -1,10 +1,10 @@
-import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import clsx from 'clsx';
 
 import { NavItemProps } from 'src/types';
 
-export default function NavItem({ href, children, name }: NavItemProps) {
+function NavItem({ href, children, name }: NavItemProps) {
   const router = useRouter();
   const isActive =
     href !== '/' ? router.asPath.startsWith(href) : router.asPath === href;
@@ -29,3 +29,5 @@ export default function NavItem({ href, children, name }: NavItemProps) {
     </Link>
   );
 }
+
+export default NavItem;

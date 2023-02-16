@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import useSWR from 'swr';
 import axios from 'axios';
 
@@ -10,7 +10,7 @@ import Container from '@components/Container';
 import CartTable from '@components/Carts/CartTable';
 import Pagination from '@components/Pagination';
 
-export default function Carts({ users }: CartsProps) {
+function Carts({ users }: CartsProps) {
   const [mounted, setMounted] = useState<boolean>(false);
   const [page, setPage] = useState<number>(1);
 
@@ -62,3 +62,5 @@ export async function getServerSideProps() {
 
   return { props: { users: mappedUsers } };
 }
+
+export default Carts;

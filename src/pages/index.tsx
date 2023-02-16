@@ -1,9 +1,11 @@
 import Container from '@components/Container';
 
-export default function Home() {
+function Home() {
   return (
     <Container>
       <></>
     </Container>
   );
 }
+
+export default Home;
