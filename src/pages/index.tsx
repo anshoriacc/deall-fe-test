@@ -83,14 +83,14 @@ function Home() {
           </a>
         </div>
         <h2 className="text-xl font-bold mt-2">
-          Deployment link:{' '}
+          Repository link:{' '}
           <a
-            href="https://deall-fe-test.vercel.app/"
+            href="https://github.com/anshoriacc/deall-fe-test"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:animate-pulse"
           >
-            https://deall-fe-test.vercel.app/
+            https://github.com/anshoriacc/deall-fe-test
           </a>
         </h2>
         <h2 className="text-xl font-bold mt-2">Pages</h2>

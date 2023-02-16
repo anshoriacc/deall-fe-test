@@ -13,6 +13,8 @@ This project built for technical test in Deall using Next.js and deployed in Ver
 
 </div>
 
+## [Deployment link](https://deall-fe-test.vercel.app/)
+
 ## Pages
 
 - Home (README): readme
