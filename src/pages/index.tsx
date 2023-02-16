@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import clsx from 'clsx';
-import Image from 'next/image';
 
 import Container from '@components/Container';
 
@@ -20,11 +20,9 @@ function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <img
               src="https://img.shields.io/npm/v/react"
               alt="react"
-              height={20}
-              width={80}
               className="h-5 w-auto"
             />
           </a>
@@ -33,11 +31,9 @@ function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <img
               src="https://img.shields.io/npm/v/next"
               alt="next"
-              height={20}
-              width={80}
               className="h-5 w-auto"
             />
           </a>
@@ -46,11 +42,9 @@ function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <img
               src="https://img.shields.io/npm/v/typescript"
               alt="typescript"
-              height={20}
-              width={80}
               className="h-5 w-auto"
             />
           </a>
@@ -59,11 +53,9 @@ function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <img
               src="https://img.shields.io/npm/v/next-themes"
               alt="next-themes"
-              height={20}
-              width={80}
               className="h-5 w-auto"
             />
           </a>
@@ -72,11 +64,9 @@ function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <img
               src="https://img.shields.io/npm/v/swr"
               alt="swr"
-              height={20}
-              width={80}
               className="h-5 w-auto"
             />
           </a>
@@ -85,11 +75,9 @@ function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <img
               src="https://img.shields.io/npm/v/tailwindcss"
               alt="tailwindcss"
-              height={20}
-              width={80}
               className="h-5 w-auto"
             />
           </a>
