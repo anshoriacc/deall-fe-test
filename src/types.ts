@@ -24,8 +24,8 @@ export interface FilterProps {
 
 export interface TableProps {
   data: any;
-  error: any;
-  isLoading: boolean;
+  error?: any;
+  isLoading?: boolean;
   users?: User[];
 }
 
@@ -43,4 +43,9 @@ export interface CartsProps {
 export interface User {
   id: number;
   fullName: string;
+}
+
+export interface CartDetailProps {
+  cart: any;
+  user: User;
 }
